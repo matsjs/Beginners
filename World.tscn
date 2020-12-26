@@ -1,37 +1,20 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://Player/Player.gd" type="Script" id=1]
-[ext_resource path="res://Player/Player.png" type="Texture" id=2]
-[ext_resource path="res://Player/World/Bush.png" type="Texture" id=3]
+[ext_resource path="res://Player/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://World/Bush.tscn" type="PackedScene" id=2]
 
-[sub_resource type="CapsuleShape2D" id=1]
-radius = 3.43326
-height = 6.80956
+[node name="World" type="YSort"]
 
-[node name="World" type="Node2D"]
+[node name="Player" parent="." instance=ExtResource( 1 )]
 
-[node name="Player" type="KinematicBody2D" parent="."]
-position = Vector2( 79.8312, 32.7572 )
-script = ExtResource( 1 )
-__meta__ = {
-"_edit_group_": true
-}
+[node name="StaticBody2D" parent="." instance=ExtResource( 2 )]
+position = Vector2( 2.72033, 55.0877 )
 
-[node name="Sprite" type="Sprite" parent="Player"]
-texture = ExtResource( 2 )
-hframes = 60
+[node name="StaticBody2D2" parent="." instance=ExtResource( 2 )]
+position = Vector2( 140.635, 70.6973 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
-position = Vector2( -1.01244, 9.03407 )
-rotation = 1.5708
-shape = SubResource( 1 )
+[node name="StaticBody2D3" parent="." instance=ExtResource( 2 )]
+position = Vector2( 158.449, 19.2775 )
 
-[node name="Bush" type="Sprite" parent="."]
-position = Vector2( 103.53, 64.5855 )
-texture = ExtResource( 3 )
-
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
-position = Vector2( 26.6281, 43.3395 )
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
-polygon = PoolVector2Array( 1.12934, -0.536049, 12.8824, -42.9573, -26.9679, -42.59, -27.3352, 106.527, 6.27131, 91.4686, 34.1849, 101.385, 101.581, 50.1491, 139.228, 84.8575, 200.748, -33.0407, 218.561, -44.0592, 274.756, -43.141, 262.819, 99.5488, 68.7096, 112.036, -27.1515, 114.24, -36.7009, 102.12, -36.7009, -43.6919, -17.6021, -62.607, 30.3284, -55.9959, 20.9627, -7.14716 )
+[node name="StaticBody2D4" parent="." instance=ExtResource( 2 )]
+position = Vector2( 40.3669, 25.3377 )
