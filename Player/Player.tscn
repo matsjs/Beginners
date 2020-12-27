@@ -213,7 +213,7 @@ __meta__ = {
 position = Vector2( 0, -9 )
 texture = ExtResource( 1 )
 hframes = 60
-frame = 14
+frame = 12
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 rotation = 1.5708
